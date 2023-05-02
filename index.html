@@ -39,7 +39,7 @@
     const Cross=document.getElementById("Cross").value;
     const Usdt=document.getElementById("usdt").value;
     const option=document.getElementById("type").value;
-        let data=Perpetual_value+"-"+Entry_Price+"-"+Exit_Price+"-"+Usdt+"-"+option+"-"+Cross ;
+        var data=Perpetual_value+"-"+Entry_Price+"-"+Exit_Price+"-"+Usdt+"-"+option+"-"+Cross ;
         console.log(data);
         window.Telegram.WebApp.sendData(data=data);
 
