@@ -19,7 +19,7 @@
     const e2=document.getElementById("Pair");
     console.log(e1);
     e1.value=window.Telegram.WebApp.initData ;
-    document.getElementById("submit").addEventListener("click",function(){
+    document.getElementById("submit_btn").addEventListener("click",function(){
         let data=e1.value + "-" + e2.value ;
         window.Telegram.WebApp.sendData(data=data);
 
