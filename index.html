@@ -18,6 +18,9 @@
     const  e1=document.getElementById("Perpetual");
     const e2=document.getElementById("Pair");
     const submit_button=document.getElementById("submit");
+    if (submit_button){
+        console.log("available");
+    };
     console.log(e1);
     e1.value=window.Telegram.WebApp.initData ;
     submit_button.addEventListener("click",function(){
