@@ -20,8 +20,8 @@
     submit_button=document.getElementById("submit");
     console.log(e1);
     e1.value=window.Telegram.WebApp.initData ;
-    submit_button.addEventListener("click",()=>{
-        let data=e1.value + "-" + e2.value
+    submit_button.addEventListener("click",function(){
+        let data=e1.value + "-" + e2.value ;
         window.Telegram.WebApp.sendData(data=data);
 
     });
