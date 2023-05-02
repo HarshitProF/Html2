@@ -27,11 +27,12 @@
             <p>Cross :</p>
             <input type="text" id="Cross" value="">
             <br>
-            <button type="button" onclick="click_me()" id ="submit">submit</button>
+            <button type="button" ontou="click_me()" id ="submit">submit</button>
         </form>
         <output id="output"></output>
 </body>
 <script>
+    document.getElementById("submit").addEventListener("touchstart",click_me);
     function click_me(){
     var  Perpetual_value=document.getElementById("Perpetual").value;
     var Entry_Price=document.getElementById("Entry_Price").value;
