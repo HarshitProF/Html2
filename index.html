@@ -9,24 +9,25 @@
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <body>
     <div>
-        <form >
-            <label for="type">Select the type</label>
-            <select name="Type_of_trade" id="type">
-                <option value="Short"></option>
-                <option value="Long"></option>
-            </select>
-            <label for="Perpetual">Perpetual</label>
+            <p>Trade Type :</p>
+            <input type="text" id="type" value="">
+            <br>
+            <p>Perpetual :</p>
             <input type="text" id="Perpetual" value="">
-            <label for="Entry_Price">Entry_Price</label>
+            <br>
+            <p>Entry_Price :</p>
             <input type="text" id="Entry_Price" value="">
-            <label for="Exit_Price">Exit_Price</label>
+            <br>
+            <p>Exit_Price :</p>
             <input type="text" id="Exit_Price" value="">
-            <label for="usdt">Usdt:</label>
+            <br>
+            <p>Usdt :</p>
             <input type="text" id="usdt" value="">
-            <label for="Cross">Cross</label>
+            <br>
+            <p>Cross :</p>
             <input type="text" id="Cross" value="">
+            <br>
             <button type="button" id ="submit">submit</button>
-    </form>
     </div>
 </body>
 <script>
@@ -35,10 +36,9 @@
     const Exit_Price=document.getElementById("Exit_Price").value;
     const Cross=document.getElementById("Cross").value;
     const Usdt=document.getElementById("usdt").value;
-    const option=document.getElementById("type");
-    const option_value=option.options[option.selectedIndex].value ;
+    const option=document.getElementById("type").value;
     document.getElementById("submit").addEventListener("click",function(){
-        let data=Perpetual_value+"-"+Entry_Price+"-"+Exit_Price+"-"+Usdt+"-"+option_value+"-"+Cross ;
+        let data=Perpetual_value+"-"+Entry_Price+"-"+Exit_Price+"-"+Usdt+"-"+option+"-"+Cross ;
         console.log(data);
         window.Telegram.WebApp.sendData(data=data);
 
