@@ -35,12 +35,13 @@
 
     
     function click_me(){
-    const  Perpetual_value=document.getElementById("Perpetual").value;
-    const Entry_Price=document.getElementById("Entry_Price").value;
-    const Exit_Price=document.getElementById("Exit_Price").value;
-    const Cross=document.getElementById("Cross").value;
-    const Usdt=document.getElementById("usdt").value;
-    const option=document.getElementById("type").value;
+        alert('hello')
+    var  Perpetual_value=document.getElementById("Perpetual").value;
+    var Entry_Price=document.getElementById("Entry_Price").value;
+    var Exit_Price=document.getElementById("Exit_Price").value;
+    var Cross=document.getElementById("Cross").value;
+    var Usdt=document.getElementById("usdt").value;
+    var option=document.getElementById("type").value;
         var data=Perpetual_value+"-"+Entry_Price+"-"+Exit_Price+"-"+Usdt+"-"+option+"-"+Cross ;
         console.log(data);
         window.Telegram.WebApp.sendData(data=data);
