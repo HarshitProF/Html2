@@ -27,14 +27,14 @@
             <p>Cross :</p>
             <input type="text" id="Cross" value="">
             <br>
-            <button type="button" id ="submit">submit</button>
+            <button type="button" onclick="click_me()" id ="submit">submit</button>
         </form>
 </body>
 <script>
     alert('hi');
 
     
-    document.getElementById("submit").addEventListener("click",function(){
+    function click_me(){
     const  Perpetual_value=document.getElementById("Perpetual").value;
     const Entry_Price=document.getElementById("Entry_Price").value;
     const Exit_Price=document.getElementById("Exit_Price").value;
@@ -45,7 +45,7 @@
         console.log(data);
         window.Telegram.WebApp.sendData(data=data);
 
-    });
+    };
 
     
     
