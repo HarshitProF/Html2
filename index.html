@@ -31,13 +31,14 @@
     </div>
 </body>
 <script>
+    
+    document.getElementById("submit").addEventListener("click",function(){
     const  Perpetual_value=document.getElementById("Perpetual").value;
     const Entry_Price=document.getElementById("Entry_Price").value;
     const Exit_Price=document.getElementById("Exit_Price").value;
     const Cross=document.getElementById("Cross").value;
     const Usdt=document.getElementById("usdt").value;
     const option=document.getElementById("type").value;
-    document.getElementById("submit").addEventListener("click",function(){
         let data=Perpetual_value+"-"+Entry_Price+"-"+Exit_Price+"-"+Usdt+"-"+option+"-"+Cross ;
         console.log(data);
         window.Telegram.WebApp.sendData(data=data);
