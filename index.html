@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form  id="form">
+    <div>
             <p>Trade Type :</p>
             <input type="text" id="type" value="">
             <br>
@@ -27,8 +27,7 @@
             <input type="text" id="Cross" value="">
             <br>
             <input type="submit" id="submit">
-        </form>
-        <output id="output"></output>
+        </div>
 </body>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <script>
@@ -43,7 +42,6 @@
         var data=Perpetual_value+"-"+Entry_Price+"-"+Exit_Price+"-"+Usdt+"-"+option+"-"+Cross ;
         console.log(data);
         window.Telegram.WebApp.sendData(data=data);
-    document.getElementById("submit").addEventListener("click",click_me);
-    document.getElementById("submit").addEventListener("touchstart",click_me);
     };
+    document.getElementById("submit").addEventListener("click",click_me);
 </script>
