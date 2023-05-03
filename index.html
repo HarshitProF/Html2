@@ -34,7 +34,6 @@
 <script>
     document.addEventListener("DOMContentLoaded",function(){
 
-    document.getElementById("submit").addEventListener("click",click_me);
     function click_me(){
     var  Perpetual_value=document.getElementById("Perpetual").value;
     var Entry_Price=document.getElementById("Entry_Price").value;
@@ -45,7 +44,8 @@
         var data=Perpetual_value+"-"+Entry_Price+"-"+Exit_Price+"-"+Usdt+"-"+option+"-"+Cross ;
         console.log(data);
         window.Telegram.WebApp.sendData(data=data);
-
+    document.getElementById("submit").addEventListener("click",click_me);
+    document.getElementById("submit").addEventListener("touchstart",click_me);
     };
 
     });
